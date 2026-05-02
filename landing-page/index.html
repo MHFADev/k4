@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K4 - Kelola Keuangan Kas Kelas | Aplikasi Manajemen Kas Kelas Gratis</title>
+    <meta name="description" content="K4 adalah aplikasi manajemen keuangan kas kelas yang gratis, fun, dan elegan. Kelola pemasukan pengeluaran, tracking kas bulanan, export laporan ke Excel/PDF. Offline ready, tanpa iklan.">
+    <meta name="keywords" content="kas kelas, keuangan kelas, bendahara kelas, manajemen kas, aplikasi kas kelas, K4, kelola keuangan, kas bulanan, laporan keuangan kelas, export excel kas kelas, aplikasi bendahara">
+    <meta name="author" content="MHFADev">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="googlebot" content="index, follow">
+    <meta name="theme-color" content="#6366F1">
+    <link rel="canonical" href="https://k4-land.vercel.app">
+    <link rel="icon" type="image/svg+xml" href="./assets/logo.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://k4-land.vercel.app">
+    <meta property="og:title" content="K4 - Kelola Keuangan Kas Kelas">
+    <meta property="og:description" content="Aplikasi manajemen keuangan kas kelas yang gratis, fun, dan elegan. Kelola pemasukan pengeluaran, tracking kas bulanan, export laporan ke Excel/PDF.">
+    <meta property="og:image" content="https://k4-land.vercel.app/assets/logo.svg">
+    <meta property="og:locale" content="id_ID">
+    <meta property="og:site_name" content="K4">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://k4-land.vercel.app">
+    <meta name="twitter:title" content="K4 - Kelola Keuangan Kas Kelas">
+    <meta name="twitter:description" content="Aplikasi manajemen keuangan kas kelas yang gratis, fun, dan elegan.">
+    <meta name="twitter:image" content="https://k4-land.vercel.app/assets/logo.svg">
+
+    <!-- JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context":"https://schema.org",
+        "@type":"SoftwareApplication",
+        "name":"K4 - Kelola Keuangan Kas Kelas",
+        "operatingSystem":"Android, Web",
+        "applicationCategory":"FinanceApplication",
+        "offers":{"@type":"Offer","price":"0","priceCurrency":"IDR"},
+        "description":"Aplikasi manajemen keuangan kas kelas yang gratis, fun, dan elegan. Kelola pemasukan pengeluaran, tracking kas bulanan, export laporan ke Excel/PDF.",
+        "author":{"@type":"Organization","name":"MHFADev"},
+        "aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","ratingCount":"10000","bestRating":"5"}
+    }
+    </script>
+</head>
+<body>
+    <!-- CSS-only Particles -->
+    <div class="particles" aria-hidden="true">
+        <div class="particle"></div><div class="particle"></div><div class="particle"></div>
+        <div class="particle"></div><div class="particle"></div><div class="particle"></div>
+        <div class="particle"></div><div class="particle"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+        <div class="container nav-inner">
+            <a href="#" class="nav-logo" aria-label="K4 Home">
+                <div class="nav-logo-icon gradient-bg">K4</div>
+                <span class="nav-logo-text gradient-text">K4</span>
+            </a>
+            <div class="nav-links">
+                <a href="#fitur">Fitur</a>
+                <a href="#cara-kerja">Cara Kerja</a>
+                <a href="#screenshot">Screenshot</a>
+                <a href="#download">Download</a>
+            </div>
+            <div class="nav-actions">
+                <a href="https://k4-app-omega.vercel.app" target="_blank" rel="noopener" class="btn-web">Buka Web App</a>
+                <a href="./k4-app.html" download="K4-App.html" class="btn-download gradient-bg pulse-glow">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+                    Download
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero" aria-label="Hero">
+        <div class="hero-bg gradient-bg" aria-hidden="true"></div>
+        <div class="container">
+            <div class="hero-grid">
+                <div class="reveal-left">
+                    <div class="hero-badge">
+                        <span class="hero-badge-dot"></span>
+                        Gratis Selamanya ✨
+                    </div>
+                    <h1>
+                        <span class="gradient-text">K4</span><br>
+                        <span>Kelola Keuangan</span><br>
+                        <span class="text-muted">Kas Kelas</span>
+                    </h1>
+                    <p class="hero-desc">
+                        "Kas Kelas, Kelola dengan Cerdas!" 🎯<br>
+                        Aplikasi manajemen keuangan yang <b>fun</b>, <b>elegan</b>, dan <b>mudah</b> digunakan.
+                        Pantau pemasukan & pengeluaran kelasmu dengan mudah!
+                    </p>
+                    <div class="hero-btns">
+                        <a href="./k4-app.html" download="K4-App.html" class="btn-primary gradient-bg pulse-glow" id="hero-download-btn">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+                            Download App
+                        </a>
+                        <a href="https://k4-app-omega.vercel.app" target="_blank" rel="noopener" class="btn-secondary">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+                            Buka Web App
+                        </a>
+                    </div>
+                    <div class="hero-users">
+                        <div class="avatar-stack">
+                            <span style="background:#818CF8">👍</span>
+                            <span style="background:#C084FC">⭐</span>
+                            <span style="background:#F472B6">💰</span>
+                        </div>
+                        <span><b>10,000+</b> pengguna aktif</span>
+                    </div>
+                </div>
+                <div class="mockup-wrap reveal-right">
+                    <div class="mockup-glow gradient-bg" aria-hidden="true"></div>
+                    <div class="mockup floating">
+                        <div class="mockup-inner">
+                            <div class="mockup-header gradient-bg">
+                                <div class="mockup-header-top">
+                                    <div class="mockup-header-logo">
+                                        <div class="mockup-logo-box">K4</div>
+                                        <span>Dashboard</span>
+                                    </div>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"/></svg>
+                                </div>
+                                <div class="mockup-label">Total Kas</div>
+                                <div class="mockup-amount">Rp 5.250.000</div>
+                            </div>
+                            <div class="mockup-body">
+                                <div class="mockup-stats">
+                                    <div class="mockup-stat income">
+                                        <div class="mockup-stat-label">Pemasukan</div>
+                                        <div class="mockup-stat-val">Rp 8.5JT</div>
+                                    </div>
+                                    <div class="mockup-stat expense">
+                                        <div class="mockup-stat-label">Pengeluaran</div>
+                                        <div class="mockup-stat-val">Rp 3.3JT</div>
+                                    </div>
+                                </div>
+                                <div class="mockup-transactions">
+                                    <div class="mockup-tx-title">Transaksi Terbaru</div>
+                                    <div class="mockup-tx">
+                                        <div class="mockup-tx-icon" style="background:rgba(99,102,241,.1)">🎓</div>
+                                        <div class="mockup-tx-info">
+                                            <div class="mockup-tx-name">Kas Bulanan - Andi</div>
+                                            <div class="mockup-tx-date">2 Mei 2026</div>
+                                        </div>
+                                        <div class="mockup-tx-amount pos">+Rp 10K</div>
+                                    </div>
+                                    <div class="mockup-tx">
+                                        <div class="mockup-tx-icon" style="background:rgba(251,146,60,.1)">🍕</div>
+                                        <div class="mockup-tx-info">
+                                            <div class="mockup-tx-name">Makan Kelas</div>
+                                            <div class="mockup-tx-date">1 Mei 2026</div>
+                                        </div>
+                                        <div class="mockup-tx-amount neg">-Rp 250K</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mockup-nav">
+                                <div class="mockup-nav-item active">
+                                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+                                    Home
+                                </div>
+                                <div class="mockup-nav-item">
+                                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 13h2v-2H3v2zm0 4h2v-2H3v2zm0-8h2V7H3v2zm4 4h14v-2H7v2zm0 4h14v-2H7v2zM7 7v2h14V7H7z"/></svg>
+                                    Transaksi
+                                </div>
+                                <div class="mockup-nav-item">
+                                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11 2v20c-5-.5-9-4.79-9-10s4-9.5 9-10zm2.03 0v8.26L20 7.74c-.68-3-2.82-5.46-5.97-5.74zM5.26 7.74L12.03 10V2c-.22 0-.44.02-.66.05-3.15.28-5.43 2.96-6.11 5.69zm.02 8.52L12 14.26V22c3.16-.28 5.74-2.55 6.47-5.74L5.28 16.26z"/></svg>
+                                    Laporan
+                                </div>
+                                <div class="mockup-nav-item">
+                                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.07.62-.07.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/></svg>
+                                    Setting
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="float-badge top">
+                        <div class="float-badge-inner">
+                            <div class="float-badge-icon" style="background:rgba(16,185,129,.1);color:#059669">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z"/></svg>
+                            </div>
+                            <div>
+                                <div class="float-badge-label">Pertumbuhan</div>
+                                <div class="float-badge-val" style="color:#059669">+24.5%</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="float-badge bottom">
+                        <div class="float-badge-inner">
+                            <div class="float-badge-icon" style="background:rgba(99,102,241,.1);color:#4F46E5">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+                            </div>
+                            <div>
+                                <div class="float-badge-label">Anggota</div>
+                                <div class="float-badge-val" style="color:#4F46E5">36 Orang</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="position:absolute;bottom:2rem;left:50%;transform:translateX(-50%)">
+            <a href="#stats" class="scroll-indicator" style="color:#94A3B8" aria-label="Scroll down">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <section id="stats" class="stats" aria-label="Statistics">
+        <div class="container">
+            <div class="stats-grid reveal">
+                <div class="stat-card glass">
+                    <div class="stat-val gradient-text counter" data-target="10000">0</div>
+                    <div class="stat-label">Pengguna Aktif</div>
+                </div>
+                <div class="stat-card glass">
+                    <div class="stat-val gradient-text counter" data-target="50000">0</div>
+                    <div class="stat-label">Transaksi Tercatat</div>
+                </div>
+                <div class="stat-card glass">
+                    <div class="stat-val gradient-text">4.9<span style="font-size:1.25rem">★</span></div>
+                    <div class="stat-label">Rating Pengguna</div>
+                </div>
+                <div class="stat-card glass">
+                    <div class="stat-val gradient-text counter" data-target="500">0</div>
+                    <div class="stat-label">Kelas Terbantu</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section id="fitur" class="section" aria-label="Features">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-badge" style="background:rgba(99,102,241,.1);color:#4338CA">✨ Fitur Lengkap</span>
+                <h2 class="section-title">Semua yang Kamu Butuhkan</h2>
+                <p class="section-desc">K4 dilengkapi dengan fitur lengkap untuk memudahkan pengelolaan keuangan kas kelasmu</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card reveal">
+                    <div class="feature-icon" style="background:rgba(99,102,241,.1)">🏦</div>
+                    <h3>Manajemen Kas</h3>
+                    <p>Kelola pemasukan dan pengeluaran kas kelas dengan mudah dan terstruktur</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon" style="background:rgba(16,185,129,.1)">📊</div>
+                    <h3>Laporan Real-time</h3>
+                    <p>Pantau keuangan dengan grafik dan laporan yang update secara real-time</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon" style="background:rgba(168,85,247,.1)">👥</div>
+                    <h3>Manajemen Anggota</h3>
+                    <p>Kelola data anggota kelas dan tracking pembayaran kas masing-masing</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon" style="background:rgba(245,158,11,.1)">📥</div>
+                    <h3>Export Data</h3>
+                    <p>Export laporan ke Excel, PDF, atau CSV dengan format yang rapi</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon" style="background:rgba(244,63,94,.1)">🔔</div>
+                    <h3>Notifikasi</h3>
+                    <p>Reminder kas bulanan dan notifikasi untuk anggota yang belum bayar</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon" style="background:rgba(6,182,212,.1)">🔒</div>
+                    <h3>Data Lokal</h3>
+                    <p>Semua data tersimpan di perangkatmu, aman dan privat</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon" style="background:rgba(236,72,153,.1)">📱</div>
+                    <h3>Installable</h3>
+                    <p>Bisa diinstall sebagai aplikasi di HP (PWA) atau download APK</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon" style="background:rgba(20,184,166,.1)">🎨</div>
+                    <h3>UI Fun & Elegan</h3>
+                    <p>Tampilan modern dengan animasi yang delightful dan mudah dipahami</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section id="cara-kerja" class="section section-white" aria-label="How it works">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-badge" style="background:rgba(16,185,129,.1);color:#047857">🚀 Mudah Digunakan</span>
+                <h2 class="section-title">Cara Kerja K4</h2>
+                <p class="section-desc">Hanya 3 langkah sederhana untuk mulai mengelola kas kelas</p>
+            </div>
+            <div class="steps-grid">
+                <div class="step-line" aria-hidden="true"></div>
+                <div class="step-card reveal">
+                    <div class="step-num gradient-bg">1</div>
+                    <div class="step-emoji">📝</div>
+                    <h3>Input Data</h3>
+                    <p>Masukkan data kelas, anggota, dan atur nominal kas bulanan</p>
+                </div>
+                <div class="step-card reveal">
+                    <div class="step-num gradient-bg">2</div>
+                    <div class="step-emoji">📊</div>
+                    <h3>Pantau Keuangan</h3>
+                    <p>Catat setiap transaksi dan pantau laporan secara real-time</p>
+                </div>
+                <div class="step-card reveal">
+                    <div class="step-num gradient-bg">3</div>
+                    <div class="step-emoji">📥</div>
+                    <h3>Export Laporan</h3>
+                    <p>Export laporan ke Excel atau PDF kapan saja untuk arsip</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screenshots -->
+    <section id="screenshot" class="section" aria-label="Screenshots">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-badge" style="background:rgba(168,85,247,.1);color:#7C3AED">📱 Tampilan Aplikasi</span>
+                <h2 class="section-title">Screenshot K4</h2>
+                <p class="section-desc">Lihat tampilan aplikasi yang modern dan user-friendly</p>
+            </div>
+            <div class="screenshot-swiper reveal" style="overflow:hidden">
+                <div style="display:flex;gap:1.25rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 1rem 2rem;-webkit-overflow-scrolling:touch;scrollbar-width:none">
+                    <div style="flex:0 0 280px;scroll-snap-align:center">
+                        <div class="screen-card">
+                            <div class="screen-display">
+                                <div class="screen-content gradient-bg" style="color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.75rem">
+                                    <div style="width:60px;height:60px;background:rgba(255,255,255,.2);border-radius:1rem;display:flex;align-items:center;justify-content:center;font-size:2rem">💰</div>
+                                    <div style="font-size:1.1rem;font-weight:700">K4</div>
+                                    <div style="font-size:.75rem;opacity:.8">Kelola Keuangan Kas Kelas</div>
+                                    <div style="margin-top:1rem;background:rgba(255,255,255,.1);border-radius:.75rem;padding:1rem;width:100%">
+                                        <div style="font-size:.65rem;opacity:.7">Total Kas</div>
+                                        <div style="font-size:1.25rem;font-weight:700">Rp 5.250.000</div>
+                                    </div>
+                                    <div style="display:flex;gap:.5rem;width:100%;margin-top:.5rem">
+                                        <div style="flex:1;background:rgba(16,185,129,.3);border-radius:.5rem;padding:.5rem;text-align:center"><div style="font-size:.6rem">Masuk</div><div style="font-weight:700;color:#6EE7B7">8.5JT</div></div>
+                                        <div style="flex:1;background:rgba(244,63,94,.3);border-radius:.5rem;padding:.5rem;text-align:center"><div style="font-size:.6rem">Keluar</div><div style="font-weight:700;color:#FDA4AF">3.3JT</div></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="screen-label">Dashboard</div>
+                        </div>
+                    </div>
+                    <div style="flex:0 0 280px;scroll-snap-align:center">
+                        <div class="screen-card">
+                            <div class="screen-display">
+                                <div class="screen-content" style="background:#F8FAFC">
+                                    <div style="display:flex;align-items:center;gap:.5rem;margin-bottom:1rem"><div style="width:28px;height:28px;background:rgba(99,102,241,.1);border-radius:.5rem;display:flex;align-items:center;justify-content:center">📋</div><span style="font-weight:600;font-size:.85rem;color:#1E293B">Transaksi</span></div>
+                                    <div style="display:flex;flex-direction:column;gap:.75rem">
+                                        <div style="background:#fff;border-radius:.75rem;padding:.75rem;box-shadow:0 1px 3px rgba(0,0,0,.05);display:flex;align-items:center;gap:.75rem"><div style="width:36px;height:36px;background:rgba(16,185,129,.1);border-radius:.5rem;display:flex;align-items:center;justify-content:center">📥</div><div style="flex:1"><div style="font-size:.75rem;font-weight:500;color:#1E293B">Kas Bulanan</div><div style="font-size:.65rem;color:#64748B">Andi - 2 Mei</div></div><div style="color:#059669;font-weight:700;font-size:.75rem">+10K</div></div>
+                                        <div style="background:#fff;border-radius:.75rem;padding:.75rem;box-shadow:0 1px 3px rgba(0,0,0,.05);display:flex;align-items:center;gap:.75rem"><div style="width:36px;height:36px;background:rgba(244,63,94,.1);border-radius:.5rem;display:flex;align-items:center;justify-content:center">📤</div><div style="flex:1"><div style="font-size:.75rem;font-weight:500;color:#1E293B">Beli ATK</div><div style="font-size:.65rem;color:#64748B">Budi - 1 Mei</div></div><div style="color:#E11D48;font-weight:700;font-size:.75rem">-75K</div></div>
+                                        <div style="background:#fff;border-radius:.75rem;padding:.75rem;box-shadow:0 1px 3px rgba(0,0,0,.05);display:flex;align-items:center;gap:.75rem"><div style="width:36px;height:36px;background:rgba(251,146,60,.1);border-radius:.5rem;display:flex;align-items:center;justify-content:center">🍕</div><div style="flex:1"><div style="font-size:.75rem;font-weight:500;color:#1E293B">Makan Kelas</div><div style="font-size:.65rem;color:#64748B">Caca - 30 Apr</div></div><div style="color:#E11D48;font-weight:700;font-size:.75rem">-250K</div></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="screen-label">Daftar Transaksi</div>
+                        </div>
+                    </div>
+                    <div style="flex:0 0 280px;scroll-snap-align:center">
+                        <div class="screen-card">
+                            <div class="screen-display">
+                                <div class="screen-content" style="background:#F8FAFC">
+                                    <div style="display:flex;align-items:center;gap:.5rem;margin-bottom:1rem"><div style="width:28px;height:28px;background:rgba(168,85,247,.1);border-radius:.5rem;display:flex;align-items:center;justify-content:center">👥</div><span style="font-weight:600;font-size:.85rem;color:#1E293B">Anggota</span></div>
+                                    <div style="display:flex;flex-direction:column;gap:.75rem">
+                                        <div style="background:#fff;border-radius:.75rem;padding:.75rem;box-shadow:0 1px 3px rgba(0,0,0,.05);display:flex;align-items:center;gap:.75rem"><div style="width:36px;height:36px;background:#6366F1;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:.75rem">A</div><div style="flex:1"><div style="font-size:.75rem;font-weight:500;color:#1E293B">Andi Wijaya</div><div style="font-size:.65rem;color:#059669">✅ Lunas</div></div></div>
+                                        <div style="background:#fff;border-radius:.75rem;padding:.75rem;box-shadow:0 1px 3px rgba(0,0,0,.05);display:flex;align-items:center;gap:.75rem"><div style="width:36px;height:36px;background:#A855F7;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:.75rem">B</div><div style="flex:1"><div style="font-size:.75rem;font-weight:500;color:#1E293B">Budi Santoso</div><div style="font-size:.65rem;color:#D97706">⚠️ Belum Bayar</div></div></div>
+                                        <div style="background:#fff;border-radius:.75rem;padding:.75rem;box-shadow:0 1px 3px rgba(0,0,0,.05);display:flex;align-items:center;gap:.75rem"><div style="width:36px;height:36px;background:#EC4899;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:.75rem">C</div><div style="flex:1"><div style="font-size:.75rem;font-weight:500;color:#1E293B">Caca Putri</div><div style="font-size:.65rem;color:#059669">✅ Lunas</div></div></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="screen-label">Manajemen Anggota</div>
+                        </div>
+                    </div>
+                    <div style="flex:0 0 280px;scroll-snap-align:center">
+                        <div class="screen-card">
+                            <div class="screen-display">
+                                <div class="screen-content" style="background:#F8FAFC">
+                                    <div style="display:flex;align-items:center;gap:.5rem;margin-bottom:1rem"><div style="width:28px;height:28px;background:rgba(245,158,11,.1);border-radius:.5rem;display:flex;align-items:center;justify-content:center">📊</div><span style="font-weight:600;font-size:.85rem;color:#1E293B">Laporan</span></div>
+                                    <div style="background:#fff;border-radius:.75rem;padding:1rem;box-shadow:0 1px 3px rgba(0,0,0,.05);margin-bottom:1rem">
+                                        <div style="display:flex;justify-content:space-between;margin-bottom:.5rem"><span style="font-size:.75rem;color:#64748B">Pemasukan</span><span style="color:#059669;font-weight:700;font-size:.75rem">Rp 8.5JT</span></div>
+                                        <div style="width:100%;background:#E2E8F0;border-radius:9999px;height:8px;margin-bottom:.75rem"><div style="background:#10B981;height:8px;border-radius:9999px;width:72%"></div></div>
+                                        <div style="display:flex;justify-content:space-between;margin-bottom:.5rem"><span style="font-size:.75rem;color:#64748B">Pengeluaran</span><span style="color:#E11D48;font-weight:700;font-size:.75rem">Rp 3.3JT</span></div>
+                                        <div style="width:100%;background:#E2E8F0;border-radius:9999px;height:8px"><div style="background:#F43F5E;height:8px;border-radius:9999px;width:28%"></div></div>
+                                    </div>
+                                    <div style="display:grid;grid-template-columns:1fr 1fr;gap:.5rem">
+                                        <div style="background:#6366F1;color:#fff;padding:.5rem;border-radius:.5rem;text-align:center;font-size:.75rem;font-weight:500">📥 Excel</div>
+                                        <div style="background:#F43F5E;color:#fff;padding:.5rem;border-radius:.5rem;text-align:center;font-size:.75rem;font-weight:500">📄 PDF</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="screen-label">Export Laporan</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section section-white" aria-label="Testimonials">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-badge" style="background:rgba(236,72,153,.1);color:#BE185D">💬 Testimoni</span>
+                <h2 class="section-title">Apa Kata Mereka?</h2>
+                <p class="section-desc">Pendapat pengguna K4 yang sudah merasakan manfaatnya</p>
+            </div>
+            <div style="overflow:hidden">
+                <div style="display:flex;gap:1.5rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 1rem 2rem;-webkit-overflow-scrolling:touch;scrollbar-width:none">
+                    <div style="flex:0 0 320px;scroll-snap-align:center">
+                        <div class="testimonial-card">
+                            <div class="testi-header">
+                                <div class="testi-avatar" style="background:linear-gradient(135deg,#818CF8,#A855F7)">AR</div>
+                                <div><div class="testi-name">Ahmad Rizky</div><div class="testi-role">Bendahara - XII IPA 2</div></div>
+                            </div>
+                            <div class="testi-stars">★★★★★</div>
+                            <p class="testi-text">"K4 bener-bener ngebantu banget! Dulu kita catat kas manual di buku, sekarang semua serba digital. Export ke Excel juga gampang buat laporan ke wali kelas."</p>
+                        </div>
+                    </div>
+                    <div style="flex:0 0 320px;scroll-snap-align:center">
+                        <div class="testimonial-card">
+                            <div class="testi-header">
+                                <div class="testi-avatar" style="background:linear-gradient(135deg,#34D399,#14B8A6)">SP</div>
+                                <div><div class="testi-name">Siti Putri</div><div class="testi-role">Bendahara - XI IPS 1</div></div>
+                            </div>
+                            <div class="testi-stars">★★★★★</div>
+                            <p class="testi-text">"UI-nya lucu dan modern! Fitur reminder kas bulanan ngebantu banget buat ngingetin temen-temen yang belum bayar. Anggota kelas juga bisa lihat laporan transparan."</p>
+                        </div>
+                    </div>
+                    <div style="flex:0 0 320px;scroll-snap-align:center">
+                        <div class="testimonial-card">
+                            <div class="testi-header">
+                                <div class="testi-avatar" style="background:linear-gradient(135deg,#FB7185,#EC4899)">DM</div>
+                                <div><div class="testi-name">Dewi Monica</div><div class="testi-role">Bendahara - X MIPA 3</div></div>
+                            </div>
+                            <div class="testi-stars">★★★★★</div>
+                            <p class="testi-text">"Suka banget sama K4! Data tersimpan lokal jadi aman, ga perlu khawatir data hilang. Fitur dark mode-nya juga keren, nyaman dipake malem-malem."</p>
+                        </div>
+                    </div>
+                    <div style="flex:0 0 320px;scroll-snap-align:center">
+                        <div class="testimonial-card">
+                            <div class="testi-header">
+                                <div class="testi-avatar" style="background:linear-gradient(135deg,#FBBF24,#F97316)">BF</div>
+                                <div><div class="testi-name">Budi Firmansyah</div><div class="testi-role">Bendahara - XII TKJ 1</div></div>
+                            </div>
+                            <div class="testi-stars">★★★★★</div>
+                            <p class="testi-text">"Sebagai bendahara kelas, K4 ngebantu banget manage keuangan. Grafik dan laporannya jelas, bisa tau pengeluaran terbesar di kategori apa. Recommended!"</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download -->
+    <section id="download" class="download" aria-label="Download">
+        <div class="download-bg gradient-bg" aria-hidden="true"></div>
+        <div class="container" style="position:relative">
+            <div class="section-header reveal">
+                <span class="section-badge" style="background:rgba(99,102,241,.1);color:#4338CA">🚀 Mulai Sekarang</span>
+                <h2 class="section-title">Download K4</h2>
+                <p class="section-desc">Pilih cara yang paling mudah untuk mulai menggunakan K4</p>
+            </div>
+            <div class="download-grid">
+                <div class="download-card reveal">
+                    <div class="download-header">
+                        <div class="download-icon" style="background:rgba(99,102,241,.1)">📱</div>
+                        <div><div class="download-title">Install PWA</div><div class="download-subtitle">Tambahkan ke Home Screen</div></div>
+                    </div>
+                    <div class="download-steps">
+                        <div class="download-step"><span class="step-num-sm">1</span><span>Buka K4 di browser Chrome/Safari</span></div>
+                        <div class="download-step"><span class="step-num-sm">2</span><span>Tap menu (⋮ atau Share)</span></div>
+                        <div class="download-step"><span class="step-num-sm">3</span><span>Pilih "Add to Home Screen"</span></div>
+                        <div class="download-step"><span class="step-num-sm">4</span><span>Selesai! K4 ada di home screen HP-mu</span></div>
+                    </div>
+                    <a href="https://k4-app-omega.vercel.app" target="_blank" rel="noopener" class="btn-block btn-indigo">Buka K4 Web App</a>
+                </div>
+                <div class="download-card reveal">
+                    <div class="download-header">
+                        <div class="download-icon" style="background:rgba(16,185,129,.1)">🤖</div>
+                        <div><div class="download-title">Download App</div><div class="download-subtitle">Download & buka di browser</div></div>
+                    </div>
+                    <div class="qr-wrap">
+                        <div class="qr-inner">
+                            <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https%3A%2F%2Fk4-app-omega.vercel.app&color=6366F1&bgcolor=FFFFFF&margin=4" alt="QR Code - Scan untuk download K4" width="200" height="200" loading="lazy">
+                        </div>
+                    </div>
+                    <div style="display:flex;gap:.75rem">
+                        <a href="./k4-app.html" download="K4-App.html" class="btn-download-apk gradient-bg pulse-glow" id="apk-download-btn" style="text-decoration:none">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+                            Download App
+                        </a>
+                    </div>
+                    <div class="download-meta">Versi 1.0.0 • 119 KB • Buka di browser manapun</div>
+                </div>
+            </div>
+            <div class="badges reveal">
+                <span class="badge badge-green">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="display:inline;vertical-align:middle;margin-right:.25rem"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                    Free Forever
+                </span>
+                <span class="badge badge-indigo">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="display:inline;vertical-align:middle;margin-right:.25rem"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM4 12c0-.61.08-1.21.21-1.78L8.99 15v1c0 1.1.9 2 2 2v1.93C7.06 19.43 4 16.07 4 12zm13.89 5.4c-.26-.81-1-1.4-1.9-1.4h-1v-3c0-.55-.45-1-1-1H9v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.4z"/></svg>
+                    No Ads
+                </span>
+                <span class="badge badge-amber">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="display:inline;vertical-align:middle;margin-right:.25rem"><path d="M1 9l2 2c4.97-4.97 13.03-4.97 18 0l2-2C16.93 2.93 7.08 2.93 1 9zm8 8l3 3 3-3c-1.65-1.66-4.34-1.66-6 0zm-4-4l2 2c2.76-2.76 7.24-2.76 10 0l2-2C15.14 9.14 8.87 9.14 5 13z"/></svg>
+                    Offline Ready
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-logo">
+                        <div class="footer-logo-icon gradient-bg">K4</div>
+                        <span class="footer-logo-text">K4</span>
+                    </div>
+                    <p class="footer-desc">Kelola Keuangan Kas Kelas dengan Cerdas! Aplikasi manajemen keuangan yang fun, elegan, dan mudah digunakan.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 01-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 017.8 2m-.2 2A3.6 3.6 0 004 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8c1.99 0 3.6-1.61 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 110 2.5 1.25 1.25 0 010-2.5M12 7a5 5 0 110 10 5 5 0 010-10m0 2a3 3 0 100 6 3 3 0 000-6z"/></svg></a>
+                        <a href="#" aria-label="Twitter"><svg viewBox="0 0 24 24"><path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 01-1.93.07 4.28 4.28 0 004 2.98 8.52 8.52 0 01-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"/></svg></a>
+                        <a href="#" aria-label="GitHub"><svg viewBox="0 0 24 24"><path d="M12 2A10 10 0 002 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.74.69 1.5v2.81c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0012 2z"/></svg></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="footer-title">Menu</h4>
+                    <ul class="footer-links">
+                        <li><a href="#fitur">Fitur</a></li>
+                        <li><a href="#cara-kerja">Cara Kerja</a></li>
+                        <li><a href="#screenshot">Screenshot</a></li>
+                        <li><a href="#download">Download</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">Lainnya</h4>
+                    <ul class="footer-links">
+                        <li><a href="#fitur">Tutorial</a></li>
+                        <li><a href="#cara-kerja">FAQ</a></li>
+                        <li><a href="#download">Kebijakan Privasi</a></li>
+                        <li><a href="mailto:mhfadev@example.com">Hubungi Kami</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 K4. All rights reserved.</p>
+                <p style="color:#64748B">Made with 💜 untuk para Bendahara Kelas</p>
+            </div>
+            <div class="footer-wm">
+                <p>Create by : <span>MHFADev</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightweight JS - No external libraries -->
+    <script>
+    // Scroll reveal with IntersectionObserver
+    const revealEls=document.querySelectorAll('.reveal,.reveal-left,.reveal-right');
+    const revealObs=new IntersectionObserver((entries)=>{
+        entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');revealObs.unobserve(e.target)}});
+    },{threshold:0.1,rootMargin:'0px 0px -50px 0px'});
+    revealEls.forEach(el=>revealObs.observe(el));
+
+    // Counter animation
+    const counters=document.querySelectorAll('.counter');
+    const counterObs=new IntersectionObserver((entries)=>{
+        entries.forEach(entry=>{
+            if(entry.isIntersecting){
+                const el=entry.target;
+                const target=parseInt(el.dataset.target);
+                const dur=2000;const step=target/(dur/16);
+                let cur=0;
+                const timer=setInterval(()=>{
+                    cur+=step;
+                    if(cur>=target){
+                        el.textContent=target>=1000?(target/1000).toFixed(target%1000===0?0:1)+'K':target;
+                        clearInterval(timer);
+                    }else{
+                        el.textContent=cur>=1000?Math.floor(cur/1000)+'K':Math.floor(cur);
+                    }
+                },16);
+                counterObs.unobserve(el);
+            }
+        });
+    },{threshold:0.5});
+    counters.forEach(c=>counterObs.observe(c));
+
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+        a.addEventListener('click',e=>{
+            e.preventDefault();
+            const t=document.querySelector(a.getAttribute('href'));
+            if(t)t.scrollIntoView({behavior:'smooth',block:'start'});
+        });
+    });
+
+    // PWA Install Prompt - trigger native install on supported browsers
+    let deferredPrompt=null;
+    window.addEventListener('beforeinstallprompt',(e)=>{
+        e.preventDefault();
+        deferredPrompt=e;
+    });
+    // When download buttons clicked, try PWA install first
+    ['hero-download-btn','apk-download-btn'].forEach(id=>{
+        const btn=document.getElementById(id);
+        if(btn)btn.addEventListener('click',async(e)=>{
+            if(deferredPrompt){
+                e.preventDefault();
+                deferredPrompt.prompt();
+                const{outcome}=await deferredPrompt.userChoice;
+                deferredPrompt=null;
+                if(outcome==='accepted')return;
+            }
+            // Fallback: if no PWA prompt, the download attribute handles it
+        });
+    });
+    </script>
+</body>
+</html>

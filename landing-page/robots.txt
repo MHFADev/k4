@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://k4-land.vercel.app/sitemap.xml
+
+# K4 - Kelola Keuangan Kas Kelas
+# Create by: MHFADev
