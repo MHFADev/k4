@@ -25,11 +25,8 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Add Capacitor Android
-        run: npx cap add android
-
       - name: Sync Capacitor
-        run: npx cap sync
+        run: npx cap sync android
 
       - name: Build APK
         run: cd android && ./gradlew assembleDebug
