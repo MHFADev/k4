@@ -15,6 +15,7 @@ Versi: 1.0.0
 - [x] Animasi koin berjatuhan dan grafik naik
 - [x] Button Download APK (dengan pulse animation)
 - [x] Button Buka Web App
+- [x] Dual QR Code di Hero (QR APK + QR Web App)
 - [x] Mockup HP dengan tampilan aplikasi
 - [x] Stats counter animasi (10K+ Users, 50K+ Transaksi, 4.9★ Rating)
 
@@ -39,15 +40,27 @@ Versi: 1.0.0
 - [x] Pagination dots
 
 ### Download Section
-- [x] QR Code placeholder
-- [x] Petunjuk install PWA
+- [x] QR Code APK (link ke GitHub Releases APK)
+- [x] QR Code Web App (link ke k4-app-omega.vercel.app)
+- [x] Tombol "📱 Download APK" (link ke file .apk)
+- [x] Tombol "🌐 Buka Web App" (link ke web app)
+- [x] Petunjuk install APK (4 langkah)
+- [x] Petunjuk install PWA (4 langkah)
 - [x] Badge: Free Forever, No Ads, Offline Ready
 
 ### Footer
 - [x] Logo + Deskripsi
-- [x] Links navigasi
+- [x] Links navigasi (Menu + Download + Lainnya)
+- [x] Download links: 📱 APK Android + 🌐 Web App
 - [x] Social media icons
 - [x] Copyright
+
+### Download Page (download.html)
+- [x] Halaman download khusus
+- [x] 2 opsi: Android APK + Web App (PWA)
+- [x] QR Code kecil untuk masing-masing opsi
+- [x] Petunjuk install APK (6 langkah)
+- [x] Link kembali ke halaman utama
 
 ---
 
@@ -56,7 +69,7 @@ Versi: 1.0.0
 ### A. SISTEM AUTHENTIKASI & ONBOARDING ✅
 - [x] Onboarding tutorial (4 slides)
 - [x] Setup profil awal (nama, kelas, sekolah, nominal kas)
-- [x] Data sample otomatis untuk demo
+- [x] ~~Data sample otomatis untuk demo~~ → **DIHAPUS**: App mulai kosong, tanpa dummy data
 - [x] PIN Lock (4-6 digit)
 - [x] Layar PIN dengan numpad
 - [x] Verifikasi PIN sebelum akses app
@@ -251,7 +264,7 @@ Versi: 1.0.0
   - [x] JSON serialization
 - [x] **Default Data:**
   - [x] Default categories (income/expense)
-  - [x] Sample data for demo
+  - [x] ~~Sample data for demo~~ → **DIHAPUS**: Tidak ada dummy data, app mulai kosong
 
 ---
 
@@ -296,13 +309,23 @@ Versi: 1.0.0
 
 ---
 
-## 🚀 SIAP DEPLOY
+## SIAP DEPLOY
 
 Aplikasi K4 sudah siap untuk:
-1. ✅ Dibuka langsung di browser
-2. ✅ Diinstall sebagai PWA
-3. ✅ **Dihosting di Vercel** (konfigurasi sudah siap)
-4. ✅ Dibuild sebagai APK (Capacitor ready)
+1. Dibuka langsung di browser
+2. Diinstall sebagai PWA
+3. **Dihosting di Vercel** (konfigurasi sudah siap)
+4. **Dibuild sebagai APK** (via Website2APK, host di GitHub Releases)
+
+### APK Distribution (Cara B - Website2APK)
+- [x] Landing page tombol "Download APK" → link ke GitHub Releases
+- [x] Landing page tombol "Buka Web App" → link ke k4-app-omega.vercel.app
+- [x] Dual QR Code: QR APK + QR Web App (terpisah)
+- [x] Halaman download.html khusus
+- [x] Petunjuk install APK di landing page
+- [x] Toast notification saat download APK
+- [ ] APK file perlu di-build manual via Website2APK
+- [ ] APK perlu di-upload ke GitHub Releases repo `MHFADev/k4-apk-release`
 
 ### Deploy ke Vercel
 

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download K4 - Kelola Keuangan Kas Kelas</title>
+    <meta name="description" content="Download K4 - Aplikasi manajemen keuangan kas kelas. Tersedia APK Android dan Web App.">
+    <meta name="theme-color" content="#6366F1">
+    <link rel="icon" type="image/svg+xml" href="./assets/logo.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+    <style>
+        .download-page{max-width:800px;margin:0 auto;padding:4rem 1.5rem;text-align:center;font-family:'Poppins',sans-serif}
+        .logo-big{width:80px;height:80px;margin:0 auto 1.5rem;background:linear-gradient(135deg,#6366F1,#A855F7);border-radius:1.25rem;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:2rem}
+        .download-page h1{font-size:2rem;margin-bottom:.5rem}
+        .download-page .subtitle{color:#64748B;margin-bottom:2rem}
+        .download-options{display:flex;gap:1.5rem;flex-wrap:wrap;justify-content:center;margin-bottom:2.5rem}
+        .download-card-dl{background:#fff;border-radius:1.25rem;padding:2rem;box-shadow:0 4px 20px rgba(0,0,0,.08);flex:1;min-width:280px;max-width:380px;text-align:center}
+        .platform-icon{font-size:3rem;margin-bottom:1rem}
+        .download-card-dl h3{font-size:1.25rem;margin-bottom:.5rem}
+        .download-card-dl .version{color:#64748B;font-size:.85rem;margin-bottom:1.25rem}
+        .btn-dl{display:inline-flex;align-items:center;gap:.5rem;padding:.875rem 1.75rem;border-radius:1rem;font-weight:600;font-size:.95rem;text-decoration:none;transition:all .3s ease;cursor:pointer;border:none}
+        .btn-dl-primary{background:linear-gradient(135deg,#6366F1,#A855F7);color:#fff;box-shadow:0 4px 15px rgba(99,102,241,.4)}
+        .btn-dl-primary:hover{transform:translateY(-2px);box-shadow:0 8px 25px rgba(99,102,241,.5)}
+        .btn-dl-secondary{background:#fff;color:#1E293B;border:2px solid #E2E8F0}
+        .btn-dl-secondary:hover{border-color:#6366F1;color:#6366F1}
+        .qr-small{margin-top:1.25rem}
+        .qr-small img{width:120px;height:120px;border-radius:.75rem}
+        .qr-small small{display:block;margin-top:.5rem;color:#94A3B8;font-size:.75rem}
+        .install-guide{background:#F8FAFC;border-radius:1.25rem;padding:2rem;text-align:left;max-width:600px;margin:0 auto}
+        .install-guide h3{margin-bottom:1rem;font-size:1.1rem}
+        .install-guide ol{padding-left:1.5rem;color:#475569;line-height:2}
+        .install-guide ol strong{color:#1E293B}
+        @media(max-width:480px){.download-page h1{font-size:1.5rem}.download-card-dl{padding:1.5rem}}
+    </style>
+</head>
+<body>
+    <div class="download-page">
+        <div class="logo-big">K4</div>
+        <h1>📱 Download K4</h1>
+        <p class="subtitle">Pilih versi yang sesuai dengan device-mu</p>
+
+        <div class="download-options">
+            <!-- APK -->
+            <div class="download-card-dl">
+                <div class="platform-icon">🤖</div>
+                <h3>Android APK</h3>
+                <p>Install langsung di HP Android</p>
+                <p class="version">v1.0.0 • Android 7.0+ • ~15 MB</p>
+                <a href="https://github.com/MHFADev/k4-apk-release/releases/download/v1.0.0/K4-Kelola-Kas-Kelas-v1.0.0.apk" download="K4-Kelola-Kas-Kelas.apk" class="btn-dl btn-dl-primary" id="dl-apk-btn">
+                    ⬇️ Download APK
+                </a>
+                <div class="qr-small">
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https%3A%2F%2Fgithub.com%2FMHFADev%2Fk4-apk-release%2Freleases%2Fdownload%2Fv1.0.0%2FK4-Kelola-Kas-Kelas-v1.0.0.apk&color=6366F1&bgcolor=FFFFFF&margin=4" alt="QR APK" loading="lazy">
+                    <small>Scan untuk download</small>
+                </div>
+            </div>
+
+            <!-- Web App -->
+            <div class="download-card-dl">
+                <div class="platform-icon">🌐</div>
+                <h3>Web App (PWA)</h3>
+                <p>Buka di browser, bisa install ke home screen</p>
+                <p class="version">Semua Device • Online</p>
+                <a href="https://k4-app-omega.vercel.app/" target="_blank" rel="noopener" class="btn-dl btn-dl-secondary">
+                    🚀 Buka Web App
+                </a>
+                <div class="qr-small">
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https%3A%2F%2Fk4-app-omega.vercel.app%2F&color=6366F1&bgcolor=FFFFFF&margin=4" alt="QR Web" loading="lazy">
+                    <small>Scan untuk buka</small>
+                </div>
+            </div>
+        </div>
+
+        <!-- Install Guide -->
+        <div class="install-guide">
+            <h3>📖 Cara Install APK</h3>
+            <ol>
+                <li>Download file APK di atas</li>
+                <li>Buka file di folder <strong>Downloads</strong> HP</li>
+                <li>Klik file APK</li>
+                <li>Jika muncul "Install unknown apps", klik <strong>Allow</strong></li>
+                <li>Klik <strong>Install</strong></li>
+                <li>Selesai! K4 siap digunakan 🎉</li>
+            </ol>
+        </div>
+
+        <p style="margin-top:2rem"><a href="./" style="color:#6366F1;text-decoration:none;font-weight:500">← Kembali ke Halaman Utama</a></p>
+    </div>
+
+    <script>
+    document.getElementById('dl-apk-btn').addEventListener('click',function(e){
+        const apkUrl='https://github.com/MHFADev/k4-apk-release/releases/download/v1.0.0/K4-Kelola-Kas-Kelas-v1.0.0.apk';
+        const link=document.createElement('a');
+        link.href=apkUrl;
+        link.download='K4-Kelola-Kas-Kelas-v1.0.0.apk';
+        link.target='_blank';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    });
+    </script>
+</body>
+</html>

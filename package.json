@@ -4,27 +4,13 @@
   "description": "K4 - Kelola Keuangan Kas Kelas",
   "main": "index.js",
   "scripts": {
-    "cap:init": "cap init",
-    "cap:add:android": "cap add android",
-    "cap:sync": "cap sync",
-    "cap:open": "cap open android",
-    "cap:build": "cap copy && cap sync",
-    "build:apk": "npm run cap:build && cd android && ./gradlew assembleDebug"
+    "build:download": "node build-download.js"
   },
   "keywords": [
     "kas-kelas",
     "manajemen-keuangan",
-    "bendahara",
-    "capacitor"
+    "bendahara"
   ],
   "author": "MHFADev",
-  "license": "MIT",
-  "devDependencies": {
-    "@bubblewrap/cli": "^1.24.1",
-    "@capacitor/cli": "^5.7.8"
-  },
-  "dependencies": {
-    "@capacitor/android": "^5.7.8",
-    "@capacitor/core": "^5.7.8"
-  }
+  "license": "MIT"
 }
